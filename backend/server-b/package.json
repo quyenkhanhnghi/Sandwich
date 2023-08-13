@@ -1,0 +1,15 @@
+{
+  "name": "server-b",
+  "version": "1.0.0",
+  "description": "This directory is for the code of the _server B_. A starter Dockerfile has been added, it has some comments to get you started.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.10.3"
+  }
+}

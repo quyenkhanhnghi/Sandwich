@@ -1,0 +1,125 @@
+// get all sandwiches
+GET http://localhost:3000/sandwich
+
+// create a new sandwich - need authorization
+###
+POST  http://localhost:3000/sandwich
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MjI4NTUyNH0.JQz5b9TGqYY4XNj2yr2PQSFPAtpoVLmCN_ZHAk1u2vg
+Content-Type: application/json
+
+{
+    "name": "Test",
+    "price": 8.99,
+    "image": "https://i.ibb.co/8rLrM8Y/ham-salad-submarine-sandwich-1339-5908.jpg",
+    "description": "A classic sandwich with turkey, bacon, lettuce, and tomato on toasted bread",
+    "toppings": [
+      { "id" : 1, "name": "Mayonnaise"},
+      { "id" : 2, "name": "Mustard"},
+      { "id" : 3, "name": "Cheese" },
+      { "id" : 4, "name": "Avocado"}
+    ],
+    "breadType": "Whole Duy"
+}
+
+// get the sandwich based on id
+###
+GET http://localhost:3000/sandwich/642cb366a36f7d2514e90556
+
+// update the sandwich based on id - need authentication
+###
+PATCH http://localhost:3000/sandwich/642cb366a36f7d2514e9055e3
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MjI4NTUyNH0.JQz5b9TGqYY4XNj2yr2PQSFPAtpoVLmCN_ZHAk1u2vg
+Content-Type: application/json
+
+{
+    "name": "Test again",
+    "price": 8.2
+}
+
+// delete the sandwich based on id - need authorization
+###
+DELETE http://localhost:3000/sandwich/642cb366a36f7d2514e9055e3
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInJvbGUiOiJjdXN0b21lciIsImlhdCI6MTY4MjIwNDc1MH0.j0gkBepSErRDALu58uQSNELmWz878tKgY0KehW9E17k
+
+
+----------------------------------------------------------------
+// get all users - need authorization
+###
+GET http://localhost:3000/api/v1/user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoidXNlciIsImVtYWlsIjoidXNlckBnbWFpbC5jb20iLCJyb2xlIjoiY3VzdG9tZXIiLCJpYXQiOjE2ODIzMzQ4MjJ9.j3FvYn2dVqzCxS6A6XXSqTXGIX75ih5uf4dfClIT6AY
+
+// get user based on name
+###
+GET http://localhost:3000/user/Duyhihi
+
+// create a new user
+###
+POST http://localhost:3000/api/v1/user
+Content-Type: application/json
+
+{
+    "name": "user",
+    "email": "user@gmail.com",
+    "password": "User123456"
+}
+
+// login
+###
+POST http://localhost:80/api/v1/user/login
+Content-Type: application/json
+
+{
+    "name": "admin",
+    "password": "Admin123456"
+}
+
+// update a user - need authorization
+###
+PATCH http://localhost:3000/user/admin
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MjI4NTUyNH0.JQz5b9TGqYY4XNj2yr2PQSFPAtpoVLmCN_ZHAk1u2vg
+Content-Type: application/json
+
+{
+    "name": "admin",
+    "role": "admin",
+    "abc": "aaaa"
+}
+
+// get all orders - need authorization
+###
+GET http://localhost:3000/order/all
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInJvbGUiOiJjdXN0b21lciIsImlhdCI6MTY4MjIwNTIxOX0.n1NkD96BnygZSNlHILFyOWZX72yKWeIOggPOMVvP6hI
+
+// get all orders from given user_id - need authentication
+###
+GET http://localhost:3000/api/v1/order
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MjMzNzQ5OX0.Yao2FUERLF6s8lN9cQXYQoVN5aNHgcjOpVTH0Fv0W1o
+
+
+// create an order - need authentication
+###
+POST http://localhost:3000/api/v1/order
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MjI5MDA4OX0.morxnICxZQz7sEvFaeILsG_r5Ad1FBow5S6gZ4F30W4
+Content-Type: application/json
+
+{
+    "items": [
+        {
+            "_id": "642cb366a36f7d2514e90556",
+            "name": "Chicken Caesar Wrap",
+            "price": 7.99,
+            "image": "https://example.com/chicken-caesar-wrap.jpg",
+            "description": "A wrap with grilled chicken, romaine lettuce, Parmesan cheese, and Caesar dressing",
+            "toppings": [
+                { "id" : 1, "name": "Caesar Dressing", "number" : 1},
+                { "id" : 2, "name": "Parmesan Cheese", "number" : 2 },
+                { "id" : 3, "name": "Tomato", "number" : 0}
+            ]
+        }
+    ]
+}
+
+// delete an order from given Order_id - need authorization
+###
+DELETE http://localhost:3000/api/v1/order/6446a5e863f77758aadc95c9
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MjM1MTUzNX0.SOUStD8TFAO8OqfsUqlHaH7ndnT3r1rDrrvItMIhoVE

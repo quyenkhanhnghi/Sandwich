@@ -1,0 +1,78 @@
+[
+  {
+    "name": "Turkey Club",
+    "price": 8.99,
+    "image": "https://i.ibb.co/8rLrM8Y/ham-salad-submarine-sandwich-1339-5908.jpg",
+    "description": "A classic sandwich with turkey, bacon, lettuce, and tomato on toasted bread",
+    "toppings": [
+      { "id" : 1, "name": "Mayonnaise"},
+      { "id" : 2, "name": "Mustard"},
+      { "id" : 3, "name": "Cheese" },
+      { "id" : 4, "name": "Avocado"}
+    ],
+    "breadType": "Whole Wheat"
+  },
+  
+  {
+    "name": "BLT",
+    "price": 6.99,
+    "image": "https://i.ibb.co/8X4dK8T/club-sandwich-panini-with-ham-cheese-tomato-herbs-2829-19928-Large.png",
+    "description": "A classic sandwich with bacon, lettuce, and tomato on toasted bread",
+    "toppings": [
+      { "id" : 1, "name": "Mayonnaise"},
+      { "id" : 2, "name": "Mustard"},
+      { "id" : 3, "name": "Cheese" }
+    ],
+    "breadType": "White"
+  },
+
+  {
+    "name": "Grilled Cheese",
+    "price": 4.99,
+    "image": "https://i.ibb.co/Fw1nwfP/sandwich-served-with-french-fries-vegetables-140725-3173-Medium.png",
+    "description": "A simple sandwich with melted cheese between two slices of bread",
+    "toppings": [
+      { "id" : 1, "name": "Butter"},
+      { "id" : 2, "name": "Tomato Soup"}
+    ],
+    "breadType": "Sourdough"
+  },
+
+  {
+    "name": "Reuben",
+    "price": 9.99,
+    "image": "https://i.ibb.co/qm71k0q/high-angle-apple-pie-slice-plate-23-2148695555.jpg",
+    "description": "A sandwich with corned beef, sauerkraut, Swiss cheese, and Russian dressing on rye bread",
+    "toppings": [
+      { "id" : 1, "name": "Russian Dressing"},
+      { "id" : 2, "name": "Sauerkraut"}
+    ],
+    "breadType": "Rye"
+  },
+
+  {
+    "name": "Chicken Caesar Wrap",
+    "price": 7.99,
+    "image": "https://i.ibb.co/Z8Dvr1M/snamee-view-chicken-roll-grilled-chicken-lettuce-cucumber-tomato-mayo-pita-141793-4849-Large.png",
+    "description": "A wrap with grilled chicken, romaine lettuce, Parmesan cheese, and Caesar dressing",
+    "toppings": [
+      { "id" : 1, "name": "Caesar Dressing"},
+      { "id" : 2, "name": "Parmesan Cheese" },
+      { "id" : 3, "name": "Tomato"}
+    ],
+    "breadType": "Wrap"
+  },
+
+  {
+    "name": "Tuna Salad",
+    "price": 6.99,
+    "image": "https://i.ibb.co/YtKC95h/tuna-sandwich-wood-1339-7586-Large.png",
+    "description": "A sandwich with tuna salad, lettuce, and tomato on toasted bread",
+    "toppings": [
+      { "id" : 1, "name": "Mayonnaise"},
+      { "id" : 2, "name": "Celery"},
+      { "id" : 3, "name": "Onion"}
+    ],
+    "breadType": "Multigrain"
+  }
+]

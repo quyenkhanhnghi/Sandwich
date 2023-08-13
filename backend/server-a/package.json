@@ -1,0 +1,30 @@
+{
+  "name": "server-a",
+  "version": "1.0.0",
+  "description": "This directory is for the code and documentation of the _server A_. A starter Dockerfile has been added, it has some comments to get you started.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "kill": "kill -9 $(lsof -ti:3000)",
+    "reset-db": "node static/init-db.js",
+    "start": "node ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.10.3",
+    "bcrypt": "^5.1.0",
+    "bcryptjs": "^2.4.3",
+    "connect": "^3.7.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "js-yaml": "^4.1.0",
+    "jsonwebtoken": "8.5.1",
+    "mongoose": "5.7.7",
+    "morgan": "^1.10.0",
+    "socket.io": "^4.6.1",
+    "swagger-tools": "^0.10.4"
+  }
+}
